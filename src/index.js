@@ -16,4 +16,11 @@ function escreveArquivoJson(dados) {
     })
 }
 
-buscaJsonNaApi()
+async function lerArquivoJson() {
+    await fs.readFile('./src/assets/answer.json', 'utf8', async (err, data) => {
+        let objArquivo = await JSON.parse(data);
+        return objArquivo;
+    })
+}
+
+

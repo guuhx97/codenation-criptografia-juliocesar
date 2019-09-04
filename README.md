@@ -14,7 +14,8 @@ Cifrado: 1d.d
 
 Escrever programa, em qualquer linguagem de programação, que faça uma requisição HTTP para a url abaixo:
 
-https://api.codenation.dev/v1/challenge/dev-ps/generate-data?token=SEU_TOKEN
+        https://api.codenation.dev/v1/challenge/dev-ps/generate-data?token=SEU_TOKEN
+
 Para encontrar o seu token , acesse a plataforma Codenation, faça o login e a informação estará na tela, conforme no exemplo abaixo:
 
 
