@@ -38,17 +38,27 @@ function descriptografa(frase){
     }
     return fraseDescriptografada;
 }
+
 async function lerArquivoJson() {
-    await fs.readFile('./src/assets/answer.json', 'utf8', async (err, data) => {
-        let objArquivo = await JSON.parse(data);
-        objArquivo.decifrado = descriptografa(objArquivo.cifrado)
-        return objArquivo;
-    })
+
+    return await new Promise(resolve => {
+        fs.readFile('./src/assets/answer.json', 'utf8', (err, data) => {
+        
+            let objArquivo = JSON.parse(data);
+    
+            objArquivo.decifrado = descriptografa(objArquivo.cifrado)
+            resolve(objArquivo);
+        })
+    }, reject => {
+
+    });
+    
 }
 
 async function chama(){
-    const frase = await lerArquivoJson();
-     console.log(frase)
+    let data = await lerArquivoJson();
+    console.log(data);
+    
 }
 
 
