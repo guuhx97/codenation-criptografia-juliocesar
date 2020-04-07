@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="Cifra de Cesar" src=".github/logo.jpg" />
+    <img alt="Cifra de Cesar" src=".github/logo.png" />
 </h1>
 
 <h4 align="center">
